@@ -1,4 +1,4 @@
-# initial
+# 绘图初始化函数
 def initial(title):
     """
     Parameters
@@ -20,7 +20,7 @@ def initial(title):
     plt.xlabel('x')
     return fig
 
-# circle
+# 绘制单一圆的函数
 def circle(center, r, con=False):
     """
     Parameters
@@ -58,7 +58,7 @@ def circle(center, r, con=False):
         x1 = np.linspace(min(x) - 2, max(x) + 2, 5000)
         return ln, x1
     
-# ellipse
+# 绘制单一椭圆的函数
 def ellipse(center, a, b, con=False):
     """
     Parameters
