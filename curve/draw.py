@@ -1,8 +1,6 @@
 # initial
 def initial(title):
     """
-    
-
     Parameters
     ----------
     title : string
@@ -25,8 +23,6 @@ def initial(title):
 # circle
 def circle(center, r, con=False):
     """
-    
-
     Parameters
     ----------
     center : tuple
@@ -64,6 +60,29 @@ def circle(center, r, con=False):
     
 # ellipse
 def ellipse(center, a, b, con=False):
+    """
+    Parameters
+    ----------
+    center : tuple
+        中心.
+        
+    a : float
+        长轴.
+
+    b : float
+        短轴.
+        
+    con : bool, optional
+        是否需要绘制在一张图中. The default is False.
+
+    Returns
+    -------
+    ln
+        图例.
+    x1
+        直线绘图区间.
+
+    """
     import numpy as np
     x = np.linspace(center[0] - a, center[0] + a, 5000)
     c = (a**2)*(b**2)

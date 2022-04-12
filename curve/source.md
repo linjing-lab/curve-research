@@ -1,16 +1,16 @@
 # curve
 
 ## __init__.py
-> initial page
+> 初始化文件
 
 ## kernel.py
-> the basic solve functions of the program.
+> 程序支持的算法接口
 
 ## draw.py
-> functions of drawing a curve image.
+> 内置的绘图函数
 
 ## maker.py
-> functions of making control of the program.
+> 绘图控制函数
 
 ## pointcut.py
-> solve program of different curves.
+> 切点求解函数

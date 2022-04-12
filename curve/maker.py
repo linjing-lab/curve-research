@@ -1,5 +1,23 @@
-# judge_circle
+# 判定给定点是否在圆内
 def judge_circle(center, r, initial_point):
+    """
+    Parameters
+    ----------
+    center : tuple
+        圆心.
+        
+    r : float
+        半径.
+        
+    initial_point : tuple
+        给定点.
+
+    Returns
+    -------
+    int : 
+        点是否在圆内（1，0，-1）
+
+    """
     import sympy as sp
     x, y = sp.symbols("x y")
     funcs = (x - center[0])**2 + (y - center[1])**2 - r**2
@@ -12,8 +30,26 @@ def judge_circle(center, r, initial_point):
     else:
         return -1
 
-# point_tangent
+# 切点求解程序
 def point_tangent_circle(center, r, initial_point):
+    """
+    Parameters
+    ----------
+    center : tuple
+        圆心.
+        
+    r : float
+        半径.
+        
+    initial_point : tuple
+        给定点.
+
+    Returns
+    -------
+    tuple : 
+        过定点的直线与圆的切点
+
+    """
     import sympy as sp
     c1 = (initial_point[1] - center[1])
     c2 = r**2
@@ -28,6 +64,27 @@ def point_tangent_circle(center, r, initial_point):
 
 # judge_ellipse
 def judge_ellipse(center, a, b, initial_point):
+    """
+    Parameters
+    ----------
+    center : tuple
+        中心.
+        
+    a : float
+        长轴.
+
+    b : float
+        短轴
+        
+    initial_point : tuple
+        给定点.
+
+    Returns
+    -------
+    int : 
+        点是否在椭圆内（1，0，-1）
+
+    """
     import sympy as sp
     x, y = sp.symbols("x y")
     funcs = (b**2)*((x - center[0])**2) + (a**2)*((y - center[1])**2) - (a**2)*(b**2)
@@ -42,6 +99,24 @@ def judge_ellipse(center, a, b, initial_point):
     
 # point_tangent_ellipse
 def point_tangent_ellipse(center, a, b, initial_point):
+    """
+    Parameters
+    ----------
+    center : tuple
+        中心.
+        
+    a : float
+        长轴.
+
+    b : float
+        短轴
+
+    Returns
+    -------
+    tuple : 
+        过定点的直线与椭圆的切点
+
+    """
     import sympy as sp
     c1 = (a**2)*((initial_point[1] - center[1])**2)
     c2 = b**2
@@ -54,8 +129,29 @@ def point_tangent_ellipse(center, a, b, initial_point):
         n.append(sp.solve(c2*(initial_point[0] - center[0])*(i - center[0]) + (a**2)*(initial_point[1] - center[1])*(y - center[1]) - c3)[0])
     return (round(m[0], 1), round(n[0], 1)), (round(m[1], 1), round(n[1], 1))
     
-# lengend_get
+# 获取图例
 def legend_get(delta_y, delta_x, const, xln):
+    """
+    Parameters
+    ----------
+    delta_y : float
+        算式（常量）
+        
+    delta_x : float
+        算法（常量）
+
+    const : float
+        算式（常量）
+
+    xln : 曲线图例
+        matplotlib.pyplot中生成的
+
+    Returns
+    -------
+    ln, fun : 
+        直线函数图例，函数方程
+
+    """
     import matplotlib.pyplot as plt
     import sympy as sp
     final = []
