@@ -30,7 +30,7 @@ def judge_circle(center, r, initial_point):
     else:
         return -1
 
-# 切点求解程序
+# 圆的切点求解程序
 def point_tangent_circle(center, r, initial_point):
     """
     Parameters
@@ -62,7 +62,7 @@ def point_tangent_circle(center, r, initial_point):
         n.append(sp.solve(c3*(i - center[0]) + c1*(y - center[1]) - c2)[0])
     return (round(m[0], 1), round(n[0], 1)), (round(m[1], 1), round(n[1], 1))
 
-# judge_ellipse
+# 判定给定点是否在椭圆内
 def judge_ellipse(center, a, b, initial_point):
     """
     Parameters
@@ -97,7 +97,7 @@ def judge_ellipse(center, a, b, initial_point):
     else:
         return -1
     
-# point_tangent_ellipse
+# 椭圆切点求解程序
 def point_tangent_ellipse(center, a, b, initial_point):
     """
     Parameters
