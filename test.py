@@ -1,2 +1,2 @@
 import curve as ce
-print(ce.pointcut.Ellipse((2, 3), 1, 2, (3, 3)))
+print(ce.pointcut.Ellipse((2, 3), 1, 2, (4, 4)))

@@ -75,4 +75,3 @@ def legend_get(delta_y, delta_x, const, xln):
         x = sp.symbols("x")
         fun = final_x
     return ln, fun
-    
