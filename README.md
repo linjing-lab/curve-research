@@ -1,4 +1,4 @@
-# 曲线科学研究（curve）
+# curve〽
 
 <div align="center">
     <img src="./asserts/logo.jfif">
